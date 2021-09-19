@@ -77,24 +77,19 @@
                             <div class="col-lg-3">
                                 <div class="main-left-sidebar">
                                     <div class="user_profile">
-                                        <div class="user-pro-img">
+                                        <div class="user-pro-img" id="userimage">
                                             <img src="images/resources/user-pro-img.png" alt="">
                                         </div>
                                         <div class="user_pro_status">
-                                            <ul class="flw-hr">
-                                                <li><a href="#" title="" class="flww"><i class="la la-plus"></i>
-                                                        Follow</a></li>
-                                                <li><a href="#" title="" class="hre">Hire</a></li>
+                                            <ul class="flw-status">
+                                                <li><span> <b id="biop"></b></span></li>
                                             </ul>
                                             <ul class="flw-status">
                                                 <li>
-                                                    <span>Following</span>
-                                                    <b>34</b>
+                                                    <span>Connections</span>
+                                                    <b id="connumber"></b>
                                                 </li>
-                                                <li>
-                                                    <span>Followers</span>
-                                                    <b>155</b>
-                                                </li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
@@ -109,17 +104,38 @@
                             <div class="col-lg-6">
                                 <div class="main-ws-sec">
                                     
-                                    <div class="product-feed-tab current" id="feed-dd">
-                                        <div class="posts-section">
-                                            <div class="post-bar">
+                                        <div class="product-feed-tab current" id="feed-dd">
+                                            <div class="posts-section">
+                                                <div class="post-bar">
+
+
+                                                        <div class="acc-settig">
+                                                            <h3>Account Details</h3>
+                                                                    <div class="cp-field">
+                                                                        <h5>Name:</h5>
+                                                                        <div class="cpp-fiel">
+                                                                            <input type="text" id="name" placeholder="Name:">
+                                                                            <i class="la la-user"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cp-field">
+                                                                        <h5>Bio:</h5>
+                                                                        <div class="cpp-fiel">
+                                                                            <input type="text" id="bio" placeholder="Bio">
+                                                                            <i class="la la-newspaper-o"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    
+                                                                    <div class="save-stngs pd2 text-center">
+                                                                        <ul>
+                                                                            <li><button id="updatebtn">Update info</button></li>
+                                                                        </ul>
+                                                                    </div>
+                                                        </div>
+
                                             </div>
-                                            <div class="process-comm">
-                                                <div class="spinner">
-                                                    <div class="bounce1"></div>
-                                                    <div class="bounce2"></div>
-                                                    <div class="bounce3"></div>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +144,7 @@
                                 <div class="right-sidebar">
                                     <div class="widget widget-portfolio">
                                         <div class="wd-heady">
-                                            <h3>Portfolio</h3>
+                                            <hspan id="proid">Portfolio</span>
                                         </div>
                                     </div>
                                 </div>
