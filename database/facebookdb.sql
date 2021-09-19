@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 10:04 PM
+-- Generation Time: Sep 20, 2021 at 12:07 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -45,10 +45,14 @@ INSERT INTO `connections` (`idq`, `user_id`, `connection_id`, `status`) VALUES
 (25, 9, 7, 2),
 (26, 9, 3, 2),
 (27, 1, 9, 1),
-(28, 1, 6, 1),
 (29, 1, 4, 1),
-(30, 1, 3, 1),
-(31, 1, 8, 1);
+(31, 1, 8, 1),
+(32, 3, 6, 2),
+(33, 3, 7, 2),
+(35, 13, 3, 0),
+(37, 12, 6, 2),
+(39, 12, 13, 2),
+(40, 1, 13, 1);
 
 -- --------------------------------------------------------
 
@@ -92,7 +96,20 @@ INSERT INTO `notifications` (`idn`, `notification`, `user_id`, `is_read`) VALUES
 (38, 'ali fawaz has accepted your friend request', 1, 0),
 (39, 'fatima hallal has accepted your friend request', 1, 0),
 (40, 'yara makke has accepted your friend request', 1, 0),
-(41, 'jaafar nehme has accepted your friend request', 1, 0);
+(41, 'jaafar nehme has accepted your friend request', 1, 0),
+(42, 'yara makke has sent you a friend request', 6, 0),
+(43, 'ali fawaz has accepted your friend request', 3, 0),
+(44, 'ali fawaz has sent you a friend request', 7, 0),
+(45, 'natali ammoun has declined your friend request', 6, 0),
+(46, 'ali reslan has sent you a friend request', 3, 0),
+(47, 'ali reslan has sent you a friend request', 12, 0),
+(48, 'zahraa shoumen has accepted your friend request', 13, 0),
+(49, 'zahraa shoumen has sent you a friend request', 13, 0),
+(50, 'ali reslan has declined your friend request', 12, 0),
+(51, 'zahraa shoumen has sent you a friend request', 13, 0),
+(52, 'ali reslan has accepted your friend request', 12, 0),
+(53, 'Haida ali has sent you a friend request', 13, 0),
+(54, 'ali reslan has accepted your friend request', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -115,17 +132,19 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `full_name`, `email`, `password`, `gender`, `bio`, `image_path`) VALUES
-(1, 'haidar ali', 'user1@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, '', 'images/resources/pf-icon1.png'),
+(1, 'Haida ali', 'user1@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, 'Full Stack web Developer', 'images/resources/pf-icon1.png'),
 (2, 'rami ayash', 'user2@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, '', 'images/resources/pf-icon1.png'),
-(3, 'yara makke', 'user3@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, '', 'images/resources/pf-icon2.png'),
-(4, 'fatima hallal', 'user4@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, '', 'images/resources/pf-icon2.png'),
+(3, 'yara makke', 'user3@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, 'Graphic designer', 'images/resources/pf-icon2.png'),
+(4, 'fatima hallal', 'user4@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, 'Teacher', 'images/resources/pf-icon2.png'),
 (5, 'ali roumany', 'user5@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, '', 'images/resources/pf-icon1.png'),
 (6, 'ali fawaz', 'user6@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, '', 'images/resources/pf-icon1.png'),
 (7, 'natali ammoun', 'user7@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, '', 'images/resources/pf-icon2.png'),
-(8, 'jaafar nehme', 'user8@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, '', 'images/resources/pf-icon1.png'),
-(9, 'jana hallal', 'user9@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, '', 'images/resources/pf-icon2.png'),
+(8, 'jaafar nehme', 'user8@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, 'IT', 'images/resources/pf-icon1.png'),
+(9, 'jana hallal', 'user9@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, 'Student', 'images/resources/pf-icon2.png'),
 (10, 'lara said', 'user10@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, '', 'images/resources/pf-icon2.png'),
-(11, 'jad chebo', 'user11@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, '', 'images/resources/pf-icon1.png');
+(11, 'jad chebo', 'user11@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, '', 'images/resources/pf-icon1.png'),
+(12, 'zahraa shoumen', 'user12@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 0, 'Engineer', 'images/resources/pf-icon2.png'),
+(13, 'ali reslan', 'user13@gmail.com', 'f98204ba6963009734f0398a80f8e44f9d3ef74ebb9c49e5d4f000bd1c102d29', 1, 'Cashier', 'images/resources/pf-icon1.png');
 
 --
 -- Indexes for dumped tables
@@ -157,19 +176,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `connections`
 --
 ALTER TABLE `connections`
-  MODIFY `idq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `idq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `idn` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `idn` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

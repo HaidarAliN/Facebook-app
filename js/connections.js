@@ -18,7 +18,7 @@ $.fn.getconnections = function () {
                 } else {
                     html += '<img src="images/resources/pf-icon2.png" alt="">';
                 }
-                html += '<h3>' + element.name + '</h3><h4>Graphic Designer</h4><ul>';
+                html += '<h3>' + element.name + '</h3><h4>'+ element.bio +'</h4><ul>';
                 html += '<li><button class="btn btn-danger unf" id="unf_' + element.id + '">unfriend</button></li>';
                 html += '<li><button class="btn btn-dark block" id="block_' + element.id + '">block</button></li></ul></div>';
                 html += ' </div><div class="row"></div></div>';
