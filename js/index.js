@@ -286,6 +286,8 @@ $(document).ready(function () {
     $("#not").click(function () {
         $.fn.getnotification();
         $.fn.getpendingcon();
+        $.fn.loaduserinfo();
+
     });
 
     $.fn.getpendingcon();
